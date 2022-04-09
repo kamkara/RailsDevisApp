@@ -8,7 +8,8 @@ class QuotesTest < ApplicationSystemTestCase
   # end
 
   setup do
-    @quote = quotes(:first) # Reference to the first fixture quote
+    # We need to order quote as well in the system tests
+    @quote = Quote.ordered.first # Reference to the first fixture quote
   end
 
   # ...
