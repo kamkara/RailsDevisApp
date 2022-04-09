@@ -18,6 +18,5 @@ la manière dont nous écrivons notre point de vue :
 <%# turbo_stream.prepend "quotes" do %> <%# render @quote %><%# end %>
 
 <!-- Methode 3 -->
-
 <%= turbo_stream.prepend "quotes", @quote %>
 <%= turbo_stream.update Quote.new, "" %>
