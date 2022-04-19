@@ -24,7 +24,8 @@
 
 
   <!-- add turbo frame forquote list-->
-  <%= turbo_frame_tag "quotes" do %>
+ <%= turbo_frame_tag "quotes" do %>
+    <%= render "quotes/empty_state" %>
     <%= render @quotes %>
   <% end %>
 
