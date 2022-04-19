@@ -8,6 +8,8 @@ class QuotesTest < ApplicationSystemTestCase
   # end
 
   setup do
+    #logged user before
+     login_as users(:accountant)
     # We need to order quote as well in the system tests
     @quote = Quote.ordered.first # Reference to the first fixture quote
   end
