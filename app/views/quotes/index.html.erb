@@ -16,7 +16,12 @@
   </div>
 
   <!-- add turbo frame for new quote-->
-  <%= turbo_frame_tag Quote.new %>
+  <%= turbo_frame_tag Quote.new do %>
+   <% if @quotes.none? %>
+      <%= render "quotes/empty_state" %>
+    <% end %>
+  <% end %>
+  
 
 
   <!-- add turbo frame forquote list-->
