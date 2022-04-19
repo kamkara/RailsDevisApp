@@ -20,3 +20,4 @@ la manière dont nous écrivons notre point de vue :
 <!-- Methode 3 -->
 <%= turbo_stream.prepend "quotes", @quote %>
 <%= turbo_stream.update Quote.new, "" %>
+<%= render_turbo_stream_flash_messages %>
